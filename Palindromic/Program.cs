@@ -10,9 +10,9 @@ class Program
 
         for (int i = 0; i < s.Length; i++)
         {
-            ExpandAroundCenter(s, i, i, ref start, ref maxLength);
+            ExpandAroundCenter(s, i, i, ref start, ref maxLength);//1
 
-            ExpandAroundCenter(s, i, i + 1, ref start, ref maxLength);
+            ExpandAroundCenter(s, i, i + 1, ref start, ref maxLength);//2
         }
 
         return s.Substring(start, maxLength);
@@ -35,7 +35,7 @@ class Program
 
     static void Main()
     {
-        string input = "babad";
+        string input = "babadacababaca";
         Console.WriteLine(LongestPalindrome(input));
     }
 }
